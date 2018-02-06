@@ -1,0 +1,625 @@
+/*
+ * THEME BY: AMOR KUMAR -- amorkumar.com
+ *
+ * SIDEBAR FROM: Reddit Stilig Mod -- https://userstyles.org/styles/88599/reddit-stilig-mod
+ *
+ * COLORS:
+ *
+ * RED:       #BF616A;
+ * ORANGE:    #D08770;
+ * YELLOW:    #EBCB8B;
+ * GREEN:     #A3BE8C;
+ * BLUE:      #5E81AC;
+ * PURPLE:    #B48EAD;
+ *
+ * WHITE:     #fff;
+ * LIGHTGRAY: #D8DEE9;
+ * GRAY:      #4C566A;
+ * DARKGRAY:  #434C5E;
+ * BLACK:     #2E3440;
+ *
+ */
+ 
+
+
+
+
+ body {
+  background-color: #fff !important;
+  color: #30292F !important;
+}
+
+input,
+textarea {
+  border: 1px solid #5E81AC;
+  color: #30292F;
+  background-color: #fff !important;
+}
+
+/*
+ * HEADER
+ *
+ */
+
+body.with-listing-chooser #header .pagename {
+  position: relative;
+  bottom: 0;
+}
+
+#header {
+  margin: 0 auto;
+  max-width: 900px !important;
+  border-bottom: 1px solid #5E81AC;
+  background-color: #fff;
+}
+
+#header-img.default-header {
+  display: none !important;
+}
+
+#sr-header-area {
+  margin-bottom: 22px;
+  height: 22px;
+  border-bottom: none;
+  background-color: #fff;
+}
+
+.flat-list li a.gold {
+  color: #EBCB8B;
+}
+
+.tabmenu li a {
+  background-color: #fff;
+}
+
+.tabmenu li.selected a {
+  border-color: #5E81AC;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+
+#header-bottom-right {
+  background-color: #fff;
+}
+
+.user .userkarma {
+  color: #D08770;
+}
+
+/*
+ * SIDEBAR
+ *
+ */
+
+.side {
+  position: fixed !important;
+  top: 45px !important;
+  right: -400px !important;
+  z-index: 1000 !important;
+  float: right !important;
+  overflow-y:auto !important;
+  padding: 10px 20px 10px 10px !important;
+  width: 300px !important;
+  height:100% !important;
+  border: 1px solid #5E81AC !important;
+  background: #fff !important;
+  transition-duration:0.4s !important;
+}
+
+.side::before {
+  position: fixed !important;
+  top: -3px !important;
+  right: 0% !important;
+  z-index: 5;
+  margin-right: 0px !important;
+  padding-top: 23px !important;
+  padding-right: 5px !important;
+  padding-left: 0px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 25px !important;
+  background: transparent!important;
+  color: #434C5E;
+  content: "◨";
+  text-align: center !important;
+  font-size: 14px !important;
+  transition: 0.5s color ease;
+}
+
+.side:hover::before {
+  background: #fff !important;
+  color: #434C5E;
+  border-bottom: 1px solid #5E81AC !important;
+  transition: 0.5s color ease;
+}
+
+.side:hover {
+  position: fixed !important;
+  right: -20px !important;
+}
+
+/* BUTTONS */
+.morelink {
+  background-image: none !important;
+  border-color: #5E81AC;
+  background-color: #fff;
+}
+
+.morelink .nub {
+  display: none !important;
+}
+
+.morelink a {
+  color: #5E81AC;
+}
+
+.morelink:hover,
+.mlh {
+  color: #fff;
+  background-color: #5E81AC;
+}
+
+/* SIDEBOX CREATE BOX */
+.sidebox.create .spacer {
+  background: #fff;
+}
+
+/* SIDEBOX BOXES */
+.sidecontentbox .content {
+  border: 1px solid #5E81AC;
+}
+
+/* SIDEBOX OTHER */
+.md hr {
+  background: #5E81AC !important;
+}
+
+/*
+ * SUBREDDIT DROPDOWN, BY DATE DROPDOWN
+ *
+ */
+
+.drop-choices a.choice:hover {
+  background-color: #D8DEE9 !important;
+}
+
+.drop-choices,
+#sr-header-area .drop-choices.srdrop {
+  border: 1px solid #5E81AC;
+  background-color: #fff;
+}
+
+/*
+ * TOP INFO BOXES
+ *
+ */
+
+/* LIVE THREAD BOX */
+.happening-now-wrap .rank-spacer, .happening-now-wrap .midcol-spacer {
+  display: none;
+}
+
+.happening-now-wrap .midcol-spacer {
+  display: none;
+}
+
+.happening-now-logo {
+  display: none;
+}
+
+.happening-now {
+  border: 1px solid #84CC8F;
+  background-color: #fff;
+  color: #A3BE8C;
+}
+
+.happening-now .state::before {
+  background: #BF616A;
+}
+
+/* INFOBAR */
+.reddit-infobar {
+  border: 1px solid #BF616A;
+  background-color: #fff;
+}
+
+.reddit-infobar.with-icon {
+  border: 1px solid #BF616A;
+  background-color: #fff;
+}
+
+.archived-infobar.with-icon::before {
+  display: none;
+}
+
+.reddit-infobar.with-icon {
+  padding: 5px;
+  min-height: 5px !important;
+}
+
+.reddit-infobar .md {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.reddit-infobar .md p {
+  margin: 0;
+  color: #BF616A;
+}
+
+.gold-accent {
+  border: 1px solid #EBCB8B;
+  border-radius: 0;
+  background-color: #fff;
+  color: #2E3440 !important;
+}
+
+.gold-accent h1, .gold-accent th {
+  color: #2E3440 !important;
+  font-family: normal x-small verdana,arial,helvetica,sans-serif;
+}
+
+.gold-accent .pretty-form input#name[type="text"] {
+  border-radius: 0;
+}
+
+.gold-accent .pretty-form button {
+  border: 1px solid #2E3440;
+  border-radius: 0;
+  background-color: #fff;
+  color: #2E3440;
+}
+
+/*
+ * CONTENT
+ *
+ */
+
+.content {
+  margin: 10px auto !important;
+  padding: 5px 20px;
+  max-width: 800px !important;
+}
+
+/*
+ * POSTS
+ *
+ */
+
+.link {
+  margin: 20px auto !important;
+  padding: 3px !important;
+}
+
+.midcol {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.link .rank {
+  display: none;
+}
+
+.nsfw-stamp {
+  color: #BF616A;
+}
+
+.md code, .md pre {
+  border: 1px solid #F0F0F0;
+  background-color: #D8DEE9;
+}
+
+.thing.stickied.link a.title {
+  color: #A3BE8C;
+}
+
+/*
+ * LINKS
+ *
+ */
+
+a {
+  color: #5E81AC;
+}
+
+.thumbnail {
+  margin-top: 5px;
+}
+
+.md a {
+  color: #5E81AC;
+}
+
+#sr-header-area .selected a {
+  color: #D08770;
+}
+
+.tabmenu li.selected a {
+  color: #D08770;
+}
+
+.flat-list li.selected a {
+  color: #D08770;
+}
+
+.thing .title {
+  color: #5E81AC;
+}
+
+.thing .title:visited {
+  color: #B48EAD;
+}
+
+.expando-button {
+  float: right;
+}
+
+/*
+ * USERNAME COLOR ON LINKS AND COMMENTS
+ *
+ */
+
+.tagline .submitter,
+.search-result-meta .submitter {
+  color: #5E81AC;
+  font-weight: 800;
+}
+
+.tagline a,
+.search-result-meta a {
+  color: #D08770;
+}
+
+/* OP USERNAME COLOR */
+.author a,
+.moderator a {
+  background-color: #fff !important;
+  color: #A3BE8C !important;
+}
+
+/* ADMIN USERNAME */
+.tagline .admin,
+.search-result-meta .admin {
+  color: #A3BE8C;
+  font-weight: 800;
+}
+
+/* MOD USERNAME */
+.thing .tagline .author.moderator {
+  background-color: #fff !important;
+  color: #A3BE8C !important;
+}
+
+.green,
+.tagline .moderator,
+.search-result-meta .moderator {
+  color: #A3BE8C !important;
+}
+
+/*
+ * COMMENT PAGE
+ *
+ */
+
+.entry {
+  padding-left: 5px;
+}
+
+.link .usertext-body .md {
+  border-radius: 0;
+}
+
+.comment .expand {
+  color: #2E3440;
+}
+
+.tagline .stickied-tagline,
+.search-result-meta .stickied-tagline {
+  color: #A3BE8C;
+}
+
+.link .usertext-body .md {
+  border: none;
+}
+
+.panestack-title {
+  border-bottom: none;
+}
+
+.morecomments a {
+  color: #5E81AC;
+}
+
+.panestack-title a.title-button.gold {
+  border: 1px solid #EBCB8B;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+/*
+ * MESSAGES
+ *
+ */
+
+.menuarea {
+  border-bottom: 1px solid #D8DEE9;
+}
+
+.message .tagline,
+.message .search-result-meta {
+  color: #434C5E;
+}
+
+.roundfield {
+  background-color: #D8DEE9;
+}
+
+/*
+ * SUBMIT PAGE
+ *
+ */
+
+.tabmenu.formtab .selected a {
+  background-color: #5E81AC !important;
+}
+
+.formtabs-content {
+  border-top: 2px solid #5E81AC !important;;
+}
+
+/*
+ * OTHER
+ *
+ */
+
+.error {
+  color: #BF616A;
+}
+
+.searchpane {
+  margin: 5px auto;
+  padding: 20px;
+  border: 1px solid #5E81AC;
+  background: #fff;
+  background-image: none;
+}
+
+.raisedbox h4 {
+  text-align: center;
+}
+
+#search input[type="text"] {
+  width: 100%;
+  border: 1px solid #5E81AC;
+}
+
+.infobar {
+  margin: 0 auto;
+  margin-bottom: 22px;
+  border: 1px solid #D08770;
+  background-color: #fff;
+}
+
+.nextprev a,
+.next-suggestions a {
+  background: #fff !important;
+}
+
+.nextprev a:hover,
+.next-suggestions a:hover {
+  border: 1px solid #5E81AC !important;
+}
+
+/* SUBSCRIBE BUTTONS */
+.fancy-toggle-button .add {
+  background-color: #A3BE8C;
+  background-image: none;
+}
+
+/*
+ * DISABLED FEATURES
+ *
+ */
+
+/* MULTI HOVER */
+.hover-bubble.multi-selector {
+  display: none !important;
+}
+
+/* SIMPLIFY TOP BAR */
+#sr-more-link,
+.sr-list > span:nth-child(2),
+ul.sr-bar:nth-child(3) {
+  display: none;
+}
+
+/* TOP AD */
+.organic-listing {
+  display: none;
+}
+
+/* FOOTER */
+.debuginfo,
+.footer-parent {
+  display: none;
+}
+
+/* MULTIREDDIT BAR */
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser {
+  display: none;
+}
+
+/*
+ * RES FEATURES
+ *
+ */
+
+/* HEADER */
+#srList {
+  border: 1px solid #5E81AC;
+  background-color: #fff;
+}
+
+table#srList {
+  border-collapse: separate !important;
+}
+
+#srList tr:hover {
+  background-color: #D8DEE9 !important;
+}
+
+#sr-header-area a.RESShortcutsCurrentSub,
+#RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
+  color: #D08770 !important;
+}
+
+#userbarToggle {
+  border: none;
+  background-color: #fff;
+}
+
+/* POSTS */
+.NERPageMarker {
+  background-color: #D8DEE9 !important;
+}
+
+#progressIndicator {
+  background-color: #D8DEE9 !important;
+}
+
+/* COMMENT PAGE */
+.RES-keyNav-activeElement,
+.RES-keyNav-activeElement .md-container {
+  background-color: #D8DEE9 !important;
+}
+
+.RESSubscriptionButton {
+  border: 1px solid #5E81AC;
+  background-color: #fff;
+  color: #2E3440;
+}
+
+.RESSubscriptionButton .res-icon {
+  display: none;
+}
+
+.newComments {
+  color: #D08770;
+}
+
+/* POPUPS */
+.RESHover,
+.RESHover.RESDialogSmall {
+  border: 1px solid #5E81AC;
+  background-color: #fff;
+}
+
+.RESHoverTitle {
+  background-color: #fff !important;
+}
+
+/* RES DISABLED FEATURES */
+#RESShortcutsEditContainer {
+  display: none;
+}

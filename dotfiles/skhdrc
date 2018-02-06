@@ -1,0 +1,108 @@
+#  NOTE(koekeishiya): A list of all built-in modifier and literal keywords can
+#                     be found at https://github.com/koekeishiya/skhd/issues/1
+#
+
+
+
+# open terminal, blazingly fast compared to iTerm/Hyper
+cmd - return : open -an /Applications/Hyper.app
+cmd - b : open -a /Applications/Firefox.app
+
+# close focused window
+alt - w : chunkc tiling::window --close
+
+# focus window
+home : chunkc tiling::window --focus west
+pagedown : chunkc tiling::window --focus south
+pageup : chunkc tiling::window --focus north
+end : chunkc tiling::window --focus east
+fn - j : chunkc tiling::window --focus prev
+fn - k : chunkc tiling::window --focus next
+
+# equalize size of windows
+shift + alt - 0 : chunkc tiling::desktop --equalize
+
+# move window by swapping 
+cmd + alt + ctrl - left : chunkc tiling::window --swap west
+cmd + alt + ctrl - down : chunkc tiling::window --swap south
+cmd + alt + ctrl - up : chunkc tiling::window --swap north
+cmd + alt + ctrl - right : chunkc tiling::window --swap east
+
+# move floating windows / windows on a floating space
+#cmd + alt + ctrl - space : chunkc tiling::window --warp-floating fullscreen
+#cmd + alt + ctrl - q   : chunkc tiling::window --warp-floating top-left
+#cmd + alt + ctrl - w  : chunkc tiling::window --warp-floating top-right
+#cmd + alt + ctrl - a  : chunkc tiling::window --warp-floating bottom-left
+#cmd + alt + ctrl - s : chunkc tiling::window --warp-floating bottom-right
+
+# send window to desktop
+# shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+# shift + cmd - z : chunkc tiling::window --send-to-desktop prev
+shift + cmd - c : chunkc tiling::window --send-to-desktop next
+shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1
+shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2
+shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3
+shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4
+shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5
+shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6
+
+# increase region size
+shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
+shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
+shift + alt - w : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north
+shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
+
+# decrease region size
+shift + cmd - a : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
+shift + cmd - s : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
+shift + cmd - w : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
+shift + cmd - d : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
+
+# set insertion point for focused container
+ctrl + alt - f : chunkc tiling::window --use-insertion-point cancel
+ctrl + alt - h : chunkc tiling::window --use-insertion-point west
+ctrl + alt - j : chunkc tiling::window --use-insertion-point south
+ctrl + alt - k : chunkc tiling::window --use-insertion-point north
+ctrl + alt - l : chunkc tiling::window --use-insertion-point east
+
+# rotate tree
+alt - r : chunkc tiling::desktop --rotate 90
+
+# mirror tree y-axis
+alt - y : chunkc tiling::desktop --mirror vertical
+
+# mirror tree x-axis
+alt - x : chunkc tiling::desktop --mirror horizontal
+
+# toggle desktop offset
+alt - a : chunkc tiling::desktop --toggle offset
+
+# toggle window fullscreen
+alt - f : chunkc tiling::window --toggle fullscreen
+
+# toggle window native fullscreen
+shift + alt - f : chunkc tiling::window --toggle native-fullscreen
+
+# toggle window parent zoom
+alt - d : chunkc tiling::window --toggle parent
+
+# toggle window split type
+alt - e : chunkc tiling::window --toggle split
+
+# float / unfloat window
+alt - t : chunkc tiling::window --toggle float
+
+# toggle sticky, float and resize to picture-in-picture size
+alt - s : chunkc tiling::window --toggle sticky;\
+          chunkc tiling::window --warp-floating pip-right
+
+# float next window to be tiled
+shift + alt - t : chunkc set window_float_next 1
+
+# change layout of desktop
+ctrl + alt - a : chunkc tiling::desktop --layout bsp
+ctrl + alt - s : chunkc tiling::desktop --layout monocle
+ctrl + alt - d : chunkc tiling::desktop --layout float
+
+ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
+

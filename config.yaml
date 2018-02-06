@@ -1,0 +1,40 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_nord-tmux:
+    dst: ~/.tmux/plugins/nord-tmux
+    src: tmux/plugins/nord-tmux
+  d_tmux:
+    dst: ~/.tmux
+    src: tmux
+  d_ubersicht-bar-master:
+    dst: ~/config/ubersicht/widgets/ubersicht-bar-master
+    src: config/ubersicht/widgets/ubersicht-bar-master
+  f_chunkwmrc:
+    dst: ~/.chunkwmrc
+    src: chunkwmrc
+  f_reddit_usercontent.css:
+    dst: ~/Documents/NB_dotfiles/reddit_userContent.css
+    src: Documents/NB_dotfiles/reddit_userContent.css
+  f_skhdrc:
+    dst: ~/.skhdrc
+    src: skhdrc
+  f_userchrome.css:
+    dst: ~/Library/Application Support/Firefox/Profiles/ex5bicyy.dev-edition-default-1508687679384/chrome/userChrome.css
+    src: Library/Application Support/Firefox/Profiles/ex5bicyy.dev-edition-default-1508687679384/chrome/userChrome.css
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+profiles:
+  MBP-di-Vittorio:
+    dotfiles:
+    - f_vimrc
+    - f_chunkwmrc
+    - f_skhdrc
+    - d_ubersicht-bar-master
+    - f_userchrome.css
+    - f_reddit_usercontent.css
+    - d_tmux
+    - d_nord-tmux
